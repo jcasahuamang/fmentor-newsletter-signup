@@ -1,4 +1,3 @@
-const btnSubscribe = document.getElementById("btnSubscribe");
 const btnDismiss = document.getElementById("btnDismiss");
 const signupForm = document.getElementById("form");
 
