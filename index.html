@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <div class="container-main" aria-label="Container">
+    
+    <main class="container container-active">
+      <section class="section-form" aria-label="Section form">
+        <div class="section-form-head">
+          <h1>
+            Stay updated!
+          </h1>
+          <h2> 
+          Join 60,000+ product managers receiving monthly updates on:
+          </h2>
+
+          <p> <img src="assets/images/icon-list.svg" alt="Item 1">Product discovery and building what matters</p>
+          <p> <img src="assets/images/icon-list.svg" alt="Item 2">Measuring to ensure updates are a success</p>
+          <p><img src="assets/images/icon-list.svg" alt="Item 3">And much more!</p>
+        </div>
+        
+          <form id ="form" class="form-input" novalidate>
+            <div class="form-input-label">
+              <label for="email">Email address</label>
+              <p></p>
+            </div>
+          <input autofocus type="email" name="email" id="formEmail" placeholder="email@company.com">
+          <button id="btnSubscribe">Subscribe to monthly newsletter</button>
+        </form>
+          
+
+      </section>
+      <section class="section-picture" aria-label="Section Picture">
+        <picture>
+          <source media="(max-width: 375px)" srcset="assets/images/illustration-sign-up-mobile.svg">
+          <source media="(max-width: 900px)" srcset="assets/images/illustration-sign-up-tablet.svg">      
+          <source media="(min-width: 901px)" srcset="assets/images/illustration-sign-up-desktop.svg">              
+          <img src="assets/images/illustration-sign-up-desktop.svg" alt="picture login">
+        </picture>
+      </section>
+    </main>
+  
+
+    <!-- Success message start -->
+   <section class="confirmation">
+    <img src="assets/images/icon-list.svg" alt="confirmation icon">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <span class="confirmation-email"></span> 
+    Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button id="btnDismiss"> Dismiss message</button>
+  </section>
+  
+  </div>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

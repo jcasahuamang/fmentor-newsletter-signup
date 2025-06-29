@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primary:hsl(4, 100%, 67%);
+ 
+    --color-blue-800: hsl(234, 29%, 20%);
+    --color-blue-700: hsl(235, 18%, 26%);
+    --color-grey: hsl(0, 0%,58%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-family: "Roboto", sans-serif;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);   
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue-700);
+    block-size: 100vh;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.container-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-block-size: 65%;   
+    max-inline-size: 58%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.confirmation{
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: 1.875rem;
+    max-inline-size: 50%;
+    margin: 1rem;
+    padding: 2.5rem;
+    
+}
+.confirmation-active{
+    display: flex;
+}
+
+.confirmation img{
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+}
+
+.confirmation h1{    
+    font-size: clamp(0.3125rem,3rem,3rem);
+    margin: 1.5625rem 0 0.625rem 0;
+    
+}
+.confirmation-email{
+    font-weight: 900;
+}
+
+.confirmation button{
+    margin: 1.5rem 0 1rem 0;
+    padding: 1rem;
+    background-color: var(--color-blue-800);
+    color: var(--color-white);
+    border-radius: 0.625rem;
+    border: none;
+    font-size: calc(0.3125rem,2rem,2rem);
+    font-weight: 500;   
+    cursor: pointer;
+    transition: background-image 0.5s;
+
+}
+
+.confirmation button:hover{
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 89, 101) 0%,
+     rgb(253, 98, 81) 50%,
+    rgb(255, 103, 32) 100%
+  );
+
+}
+
+.container{
+    display: none; /*grid;*/
+    grid-template-columns: 1.3fr 1fr;    
+    background-color: var(--color-white);
+    border-radius: 1.875rem;
+    inline-size: 100%;
+    block-size: 100%;   
+    margin: 1rem;
+    padding: 1.25rem;
+}
+
+.container-active{
+    display: grid;
+}
+
+.section-form{
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 100%;
+    max-block-size: 100%;
+   padding: 4rem 4rem 0.75rem 4rem;
+}
+.section-form-head{
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 100%;
+    margin: 0 0 2.1875rem 0;
+    
+}
+.section-form-head h1{
+    font-size: clamp(0.3125rem,3rem,3rem) ;
+    font-weight: 800;
+    color: var(--color-blue-800);
+    margin: 0;
+}
+.section-form-head h2{
+    font-size: clamp(0.3125rem,1rem,1rem) ;
+    font-weight: 400;
+    color: var(--color-blue-700);
+    margin: 1.5625rem 0;
+}
+
+.section-form-head p{
+    font-size: clamp(0.3125rem,1rem,1rem) ;
+    font-weight: 400;
+    color: var(--color-blue-800);
+    margin: 0.625rem 0;
+    inline-size: 1.5;
+    display: flex;
+}
+
+.section-form-head p img{
+    margin: 0 0.625rem 0 0; 
+}
+
+.section-picture{
+    display: flex;
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+.section-picture img{
+    max-inline-size: 100%;
+    block-size: 100%;
+    object-fit:cover;
+    object-position: center;   
+    border-radius: 1rem; 
+}
+
+.form-input{
+    display: flex;
+}
+.form-input label{
+     font-size: clamp(0.3125rem,0.75rem,0.75rem) ;
+    font-weight: bold;
+    color: var(--color-blue-800);
+    flex: 1;
+}
+
+.form-input-label{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-input-label p{
+    margin: 0;
+    padding: 0;
+    font-size: clamp(0.3125rem,0.75rem,0.75rem) ;
+    color: var(--color-primary);
+
+}
+.form-input input{
+    padding: 1.25rem;
+    margin: 0.625rem 0;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid grey;
+
+}
+
+.error-input{
+    color: var(--color-primary);
+    background-color: rgb(255, 232, 230);
+    border: 0.125rem solid var(--color-primary);
+}
+
+.form-input button{
+    margin: 0.625rem 0;
+    padding: 1rem;
+    background-color: var(--color-blue-800);
+    color: var(--color-white);
+    border-radius: 0.625rem;
+    border: none;
+    font-size: calc(0.3125rem,2rem,2rem);
+    font-weight: 500;   
+    cursor: pointer;
+    transition: background-image 0.5s;
+
+}
+
+.form-input button:hover{
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 89, 101) 0%,
+     rgb(253, 98, 81) 50%,
+    rgb(255, 103, 32) 100%
+  );
+
+}
+/******* media query ***********************************************/
+@media screen and (max-width: 23.49375rem) {/*375.9px*/
+       .container-main{
+        align-items: center;
+        max-block-size: 100%;   
+        max-inline-size: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;        
+        block-size: 100%;
+        max-inline-size: 100%;
+        border-radius: 0;
+    }
+
+    .section-form{
+      grid-row: 2;
+       padding: 0.9375rem 1.25rem;        
+    }
+
+
+    .section-form-head h1{
+         font-size: calc(0.3125rem,2rem,2rem);        
+        
+    }
+
+     .confirmation h1{    
+        font-size: clamp(0.3125rem,1.5rem,1.5rem)
+    }
+
+    .section-form-head h2{
+         font-size: calc(0.3125rem,0.75rem,0.75rem);
+            margin: 0.9375rem 0;
+    }
+
+    .section-form-head p{
+         font-size: calc(0.3125rem,0.75rem,0.75rem);        
+    }
+
+
+    .section-picture{
+        grid-row: 1;
+    }
+}
+
+@media screen and (min-width: 23.5rem) and (max-width: 56.25rem) {
+
+    .container-main{
+        align-items: center;
+        max-block-size: 100%;   
+        max-inline-size: 58%;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0.5rem 1rem;  
+        block-size: 80%;
+    }
+    
+    .section-picture{
+        grid-row: 1;
+
+    }
+
+    .section-form{
+      grid-row: 2;
+       padding: 0;        
+    }
+
+
+    .section-form-head{
+    margin: 0 0 0.625rem 0;
+    }
+    .section-form-head h1{
+        font-size: calc(0.3125rem,2rem,2rem);        
+    }
+
+    .confirmation h1{    
+        font-size: clamp(0.3125rem,1.5rem,1.5rem)
+    }
+
+    .section-form-head h2{
+    margin: 0.625rem 0;
+    }
+
+    .section-form-head p{
+        margin: 0.3125rem 0;
+    }
+
+    .section-form-head p img{
+        margin: 0 0.3125rem 0 0; 
+    }
+    
+    
+}
+ 
+
+@media screen and (min-width: 56.3125rem) and (max-width: 78.125rem) {
+    .section-form{
+        padding: 2rem 4rem 0.5rem 4rem;
+    } 
+    
+    .section-form-head h1{
+        font-size: calc(0.3125rem,1.875rem,1.875rem);        
+    }
+    
+    .confirmation h1{    
+        font-size: clamp(0.3125rem,1.875rem,1.875rem)
+    }
+
+}
